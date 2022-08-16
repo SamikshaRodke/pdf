@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/scripts/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+
+    <title>Task 1</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header" style="text-align:center;">
+                <img src="../logo.jpg" width="60px" height="60px">
+                <h3 style="text-align:center; ">PDF TOOLS</h3>
+                <h6 style="text-align:center;">version 1.0</h6>
+            </div>
+            <hr color="white">
+            <ul class="list-unstyled components">
+                <li><h6><small>CONVERT PDF TO</small></h6></li>
+                <li><a href="pdf_jpg.html">Pdf to JPG</a></li>
+                <li><a href="pdf_png.html">Pdf to PNG</a></li>
+                <li><a href="pdf_word.html">Pdf to Word</a></li>
+                <li><a href="pdf_power.html">Pdf to PowerPoint</a></li>
+                <li><a class="last" href="pdf_excel.html">Pdf to Excel</a></li>
+                <br>
+                <li><h6><small>CONVERT PDF FROM</small></h6></li>
+                <li><a href="jpg_pdf.html">JPG to Pdf</a></li>
+                <li><a href="png_pdf.html">PNG to Pdf</a></li>
+                <li><a href="word_pdf.html">Word to Pdf</a></li>
+                <li><a href="power_pdf.html">PowerPoint to Pdf</a></li>
+                <li><a class="last" href="excel_pdf.html">Excel to Pdf</a></li>
+                <br>
+                <li><h6><small>OPTIMIZE PDF</small></h6></li>
+                <li><a class="last present" href="pdf_comp.html">Compress Pdf</a></li> 
+                <br>              
+                <li><h6><small>ORGANIZE PDF</small></h6></li>
+                <li><a href="pdf_merge.html">Merge Pdf</a></li>               
+                <li><a class="last" href="pdf_split.html">Split Pdf</a></li>               
+                <br>
+                <li><h6><small>PDF SECURITY</small></h6></li>
+                <li><a class="last" href="pdf_protect.html">Protect Pdf</a></li> 
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <span class="fileinput">
+                <i class="fa-solid fa-folder-plus" style="font-size:50px;"></i>
+                <h4>Upload your pdf file</h4>
+                <h5><small>Compress the pdf</small></h5>
+                <div>
+                    <input type="file" style="width:300px;" class="custom-file-input" id="custom_FileInput" accept=".pdf"
+                        aria-describedby="customFileInput" hidden>
+                    </div>
+                    <button class="btn btn-primary"style="width:200px" onclick="activecustomFileInput()" id="custom_btn">Upload</button>
+            </span>
+            <div class="copy-right" style="text-align:center;">
+                <p style="font-size:12px; padding-top: 200px ;">Developed By CodeClause</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $('.fileinput').toggleClass('active');
+            });
+        });
+    </script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
